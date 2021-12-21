@@ -1,0 +1,12 @@
+born: 1995
+
+from: sweden
+
+food: avocado
+
+drink: coffee
+
+movie: notting hill
+
+color: green
+

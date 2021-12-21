@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.conA {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./img/Background/drive/Daily.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conA .container {
+    position: absolute;
+    top: 250px;
+    left: 211px;
+}
+
+h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 54px;
+    margin-bottom: 20px;
+}
+
+.conA p {
+    color: #fff;
+    font-size: 17px;
+}
+
+.conB {
+    position: absolute;
+    width: 1600px;
+    left: -80px;
+    top: 600px;
+}
+
+#dialButton {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 250px;
+    top: 280px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#dialPlate {
+    position: relative;
+    width: 900px;
+    left: -55px;
+    top: -25px;
+}
+
+#dialIcon {
+    position: relative;
+    left: 7px;
+    top: -875px;
+    transition: all .2s linear;
+}
+
+#progressbar {
+    width: 1300px;
+    height: 80px;
+    border-radius: 40px;
+    background: rgba(236, 246, 255, 0.5);
+    position: absolute;
+    top: 825px;
+    left: 2200px;
+    padding-right: 200px;
+    box-shadow: 5px 4px 4px rgba(87, 87, 87, 0.25);
+    transition: all 1s linear;
+}
+
+.progressbar-locate {
+    left: 820px!important;
+}
+
+#subPlayer{
+ margin-top: -40px;
+}
+
+#mainPlayer {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.player-img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 30px;
+    background-size: cover;
+}
+
+p.player-title {
+    display: inline-block;
+    width: 300px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 700;
+    padding-right: 40px;
+    margin-top: 10px;
+}
+
+.sub-player-title {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 700;
+    padding-right: 40px;
+}
+
+.player-progress {
+    display: inline-block;
+    width: 250px;
+    height: 70px;
+    padding-right: 40px;
+    margin-right: 40px;
+}
+
+.player-progress > div {
+    height: inherit;
+    background-color: rgba(143, 145, 146, 0.5);
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+
+.playbutton {
+    display: inline-block;
+    display: flex;
+    width: 200px;
+    align-items: center;
+    /* margin: 20px 10px auto 0; */
+    margin-right: 20px;
+    justify-content: space-around;
+}
+
+.sub-player-artist {
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 500;
+    color: #5c56569a;
+    padding-right: 40px;
+}
+
+.player-progress {
+    width: 440px;
+    height: 30px;
+    background-color: rgba(221, 221, 221, 0.5);
+    margin: auto 0;
+    margin-right: 50px;
+    border-radius: 15px;
+    box-shadow: inset -1px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.playbutton button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* #playbutton button i {
+    font-size: 20px;
+    color: #999;
+} */
+
+#record {
+    position: absolute;
+    width: 911px;
+    top: -300px;
+    right: -200px;
+    animation: record_rotate 2s linear infinite;
+    transform-origin: 50%, 50%;
+    z-index: 997;
+}
+
+@keyframes record_rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes record_rotate_stop {
+
+    50% {
+        transform: rotate(40deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#mainTonearm {
+    position: absolute;
+    width: 500px;
+    top: 400px;
+    right: -220px;
+    z-index: 998;
+}
+
+.fa-play {
+    position: absolute;
+    top: 110px;
+    right: 200px;
+    z-index: 100;
+    font-size: 100px;
+    color: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.fa-play:hover {
+    opacity: 1;
+}
+
+/* 서브 페이지 css */
+
+.bigsub {
+    position: fixed;
+    display: inline-block;
+    bottom: -1500px;
+    right: 7%;
+    margin: auto;
+    width: 1650px;
+    height: 1100px;
+    z-index: 10;
+}
+
+.sub_index {
+    position: relative;
+    width: 1650px;
+    height: 100px;
+}
+
+#infoButton {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    margin-right: 100px;
+    width: 689px;
+    height: 100px;
+    padding-top: 40px;
+    /* 나중에 올라갈 때 패딩탑 줄이고 그만큼 길이늘리기 */
+}
+
+#songIndex,
+#lyricsIndex,
+#artistIndex {
+    width: 187px;
+    height: 60px;
+    border-radius: 20px 20px 0px 0px;
+    border: none;
+    background: radial-gradient(68.69% 273.19% at 17.06% 16.73%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.indexicon {
+    margin-top: 10px;
+}
+
+#subPlayer .playbutton {
+    margin-top: 20px;
+    margin-left: 210px;
+}
+
+.info-item .playbutton {
+    margin: 20px auto;
+}
+
+#subSong .sub-player-title,
+#subSong .sub-player-artist,
+#subLyrics .sub-player-title,
+#subLyrics .sub-player-artist,
+#subArtist .sub-player-title,
+#subArtist .sub-player-artist
+ {
+    padding: 0;
+}
+
+#subSong.info-item,
+#subArtist.info-item,
+#subLyrics.info-item{
+    padding-top: 70px;
+    text-align: center;
+}
+
+
+/* #subPlayer #playbutton i {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #333;
+} */
+
+.index--opacity {
+    opacity: 1 !important;
+}
+
+.sub-page {
+    position: relative;
+    margin: auto;
+    width: 1650px;
+    height: 1055px;
+    background: radial-gradient(68.69% 273.19% at 17.06% 16.73%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    backdrop-filter: blur(20px);
+}
+
+.info-item {
+    position: absolute;
+    width: 650px;
+    height: 400px;
+    left: 850px;
+    top: 70px;
+    color: #333;
+    font-weight: 700;
+    font-size: 24px;
+    z-index: 7;
+    padding-top: 9%;
+    text-align: center;
+}
+
+.item-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+#example_item div:nth-child(4) {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.song-info-text,
+.lyrics-info-text,
+.artist-info-text {
+    overflow: scroll;
+    height: 50%;
+    margin-top: 20px;
+}
+
+.song-info-text::-webkit-scrollbar {
+    display: none;
+}
+
+.lyrics-info-text::-webkit-scrollbar {
+    display: none;
+}
+
+.artist-info-text::-webkit-scrollbar {
+    display: none;
+}
+
+.sub-player-title {
+    width: 100%;
+}
+
+.artist {
+    margin-top: 6px;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(82, 74, 74, 0.6);
+}
+
+.tag {
+    display: inline-block;
+    width: 112px;
+    height: 42px;
+    background: rgba(255, 253, 244, 0.21);
+    border-radius: 8px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 20px;
+    margin-right: 40px;
+}
+
+
+#music_list {
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    bottom: 250px;
+    width: 100%;
+    height: 300px;
+}
+
+/* newItem.find('.item:nth-child(4)').css({
+    'width': '120px',
+    'height': '120px'
+});z */
+
+.item:nth-child(4) .item-img {
+    width: 110px;
+    height: 110px;
+}
+
+#line {
+    position: absolute;
+    width: 100%;
+    bottom: 400px;
+    columns: #fff;
+
+}
+
+#sub_LP {
+    position: fixed;
+    border-radius: 200px;
+    top: 100px;
+    left: 200px;
+    width: 400px;
+    height: 400px;
+    background-color: #333;
+    opacity: 0;
+}
+
+#sub_LP_Player {
+    position: fixed;
+    border-radius: 200px;
+    top: 400px;
+    left: 400px;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    transform-origin: center;
+    background-size: cover;
+    z-index: 999;
+}
+
+
+.musicinfo_head_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 40px;
+}
+
+.musicinfo_head_txt_title {
+    width: 100%;
+}
+
+.musicinfo_head_txt_artist {
+    margin-top: 6px;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(82, 74, 74, 0.6);
+}

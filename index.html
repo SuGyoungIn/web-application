@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="./img/logo.png" alt="logo">
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="conA">
+            <div class="container">
+                <h1>DAILY</h1>
+                <p class="main-text">
+                    Is this how you feel? Welcome to this place. This place can provide a perfect moment for you.<br> Whatever mood you think
+                    of, this place will make your mood come true.
+                    <br>Press the play button to get into the enchanting music! It will make you feel better.</p>
+            </div>
+        </div>
+
+        <div class="conB">
+            <img src="./img/drive/Small_Dial.png" alt="dialButton" id="dialButton">
+            <img src="./img/dialplate.png" alt="dialPlate" id="dialPlate">
+            <img src="./img/dialicon.png" alt="dialIcon" id="dialIcon">
+
+            <div class="container-dial">
+                <img src="#" alt="daily">
+            </div>
+        </div>
+
+        <div id="progressbar">
+            <!-- 재생 부분 -->
+            <div id="mainPlayer">
+                <!-- <img src="./img/LP/drive/Daily_LP.png" alt=""> -->
+                <div class="player-img"></div>
+                <div>
+                    <p class="player-title"><br>
+                        <p class="sub-player-artist"></p></p>
+                </div>
+                <div class="player-progress">
+                    <div></div>
+                </div>
+                <div class="playbutton">
+                    <button class="prev"><img src="./img/gl.png" alt="" width="20px" height="20px"></button>
+                    <button class="pause"><img class="pro-changeButton" src="./img/gp.png" alt="" width="23px" height="23px"></button>
+                    <button class="next"><img src="./img/gr.png" alt="" width="20px" height="20px"></button>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <div class="conC">
+        <img src="./img/LP/drive/Daily_LP.png" alt="lp판" id="record">
+        <img src="./img/LP/drive/LP_ ToneArm.png" alt="mainTonearm" id="mainTonearm">
+        <div id="play"><i class="fas fa-play"></i></div>
+    </div>
+
+    <div id='sub_LP_Player'></div>
+
+    <!-- 서브페이지 -->
+
+    <div class="bigsub">
+        <section class="sub_index">
+            <div id="infoButton">
+                <button type='button' id="songIndex"><img class="indexicon" src="./img/subinfo/song.png"
+                        alt=""></button>
+                <button type='button' id="lyricsIndex"><img class="indexicon" src="./img/subinfo/txt.png"
+                        alt=""></button>
+                <button type='button' id="artistIndex"><img class="indexicon" src="./img/subinfo/artist.png"
+                        alt=""></button>
+            </div>
+        </section>
+        <section class="sub-page">
+            <hr id='line' style='border: solid 1px #fff'>
+
+            <!-- List 부분 -->
+
+            
+            <div id="music_list">
+            </div>
+
+            <div id='sub_LP'></div>
+
+
+            <!-- List에 들어갈 예시 아이템 -->
+            <div id="example_item" class="item" style="display: none;">
+                <div class="item-img"></div>
+
+                <div class="item-title" style="display: none;"></div>
+
+                <div class="item-artist" style="display: none;"></div>
+                <div class="item-song-info" style="display: none;"></div>
+                <div class="item-lyrics" style="display: none;"></div>
+                <div class="item-artist-info" style="display: none;"></div>
+
+
+                <!-- 오디오 부분의 구조는 변경시 클래스 이름 주의할 것 -->
+                <audio class="item-audio">
+                    <source type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!-- 재생 부분 -->
+            <div id="subPlayer" class="info-item">
+                <div class="tag
+                ">#radio</div>
+                <div class="tag">#melody</div>
+                <div class="sub-player-title"></div>
+                <div class="sub-player-artist"></div>
+                <div class="player-progress">
+                    <div></div>
+                </div>
+                <div class="playbutton">
+                    <button class="prev"><img src="./img/bl.png" alt="" width="30px" height="30px"></button>
+                    <button class="pause"><img class="changeButton" src="./img/bp.png" alt="" width="33px" height="33px"></button>
+                    <button class="next"><img src="./img/br.png" alt="" width="30px" height="30px"></button>
+                </div>
+            </div>
+
+            <div id="subSong" class="info-item">
+                <div class="sub-player-title"></div>
+                <div class="sub-player-artist"></div>
+                <div class="playbutton">
+                    <button class="prev"><img src="./img/bl.png" alt="" width="30px" height="30px"></button>
+                    <button class="pause"><img class="changeButton" src="./img/bp.png" alt="" width="33px" height="33px"></button>
+                    <button class="next"><img src="./img/br.png" alt="" width="30px" height="30px"></button>
+                </div>
+                <div class="song-info-text"></div>
+            </div>
+
+            <div id="subLyrics" class="info-item">
+                <div class="sub-player-title"></div>
+                <div class="sub-player-artist"></div>
+                <div class="playbutton">
+                    <button class="prev"><img src="./img/bl.png" alt="" width="30px" height="30px"></button>
+                    <button class="pause"><img class="changeButton" src="./img/bp.png" alt="" width="33px" height="33px"></button>
+                    <button class="next"><img src="./img/br.png" alt="" width="30px" height="30px"></button>
+                </div>
+                <div class="lyrics-info-text"><pre></pre></div>
+            </div>
+
+            <div id="subArtist" class="info-item">
+                <div class="sub-player-title"></div>
+                <div class="sub-player-artist"></div>
+                <div class="playbutton">
+                    <button class="prev"><img src="./img/bl.png" alt="" width="30px" height="30px"></button>
+                    <button class="pause"><img class="changeButton" src="./img/bp.png" alt="" width="33px" height="33px"></button>
+                    <button class="next"><img src="./img/br.png" alt="" width="30px" height="30px"></button>
+                </div>
+                <div class="artist-info-text"></div>
+            </div>
+
+    </div>
+
+
+
+    <!--  <div id="musicInfo"></div> -->
+    <!-- infoButton 누르면 여기에 바뀌는 정보가 뜨는데 그거는 js로 처리하면 될거 같아서 위치 잡을 태그만 만들어놓을게! -->
+
+    <!-- Script 파일 로드 -->
+
+    </section>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
